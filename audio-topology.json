@@ -1,0 +1,700 @@
+{
+  "nodes": {
+    "hw:hdaa0": {
+      "label": "hdaa0",
+      "kind": "hw_device",
+      "layer": "hardware",
+      "status": "active",
+      "meta": {
+        "desc": "Realtek ALC298 (Analog 2.0+HP/2.0)"
+      }
+    },
+    "pcm:0": {
+      "label": "pcm0 \u2014 Realtek ALC298 (Analog 2.0+HP/2.0)",
+      "kind": "pcm",
+      "layer": "kernel",
+      "status": "active",
+      "meta": {
+        "unit": "0",
+        "caps": [
+          "play",
+          "rec"
+        ],
+        "play_fmt": "s16le:2.0",
+        "rec_fmt": "s16le:2.0",
+        "bitperfect": "0"
+      }
+    },
+    "dsp:0": {
+      "label": "/dev/dsp0",
+      "kind": "dsp_node",
+      "layer": "dsp",
+      "status": "active",
+      "meta": {}
+    },
+    "pcm:1": {
+      "label": "pcm1 \u2014 Realtek ALC298 (Left Analog Mic)",
+      "kind": "pcm",
+      "layer": "kernel",
+      "status": "active",
+      "meta": {
+        "unit": "1",
+        "caps": [
+          "rec"
+        ],
+        "play_fmt": "",
+        "rec_fmt": "s16le:2.0",
+        "bitperfect": "0"
+      }
+    },
+    "dsp:1": {
+      "label": "/dev/dsp1",
+      "kind": "dsp_node",
+      "layer": "dsp",
+      "status": "active",
+      "meta": {}
+    },
+    "hw:hdaa1": {
+      "label": "hdaa1",
+      "kind": "hw_device",
+      "layer": "hardware",
+      "status": "active",
+      "meta": {
+        "desc": "Intel Kaby Lake (HDMI/DP 8ch)"
+      }
+    },
+    "pcm:2": {
+      "label": "pcm2 \u2014 Intel Kaby Lake (HDMI/DP 8ch)",
+      "kind": "pcm",
+      "layer": "kernel",
+      "status": "active",
+      "meta": {
+        "unit": "2",
+        "caps": [
+          "play"
+        ],
+        "play_fmt": "s16le:2.0",
+        "rec_fmt": "",
+        "bitperfect": "0"
+      }
+    },
+    "dsp:2": {
+      "label": "/dev/dsp2",
+      "kind": "dsp_node",
+      "layer": "dsp",
+      "status": "active",
+      "meta": {}
+    },
+    "pw:server": {
+      "label": "PipeWire",
+      "kind": "server",
+      "layer": "server",
+      "status": "active",
+      "meta": {}
+    },
+    "pw:client:33": {
+      "label": "pipewire",
+      "kind": "client",
+      "layer": "client",
+      "status": "active",
+      "meta": {
+        "pw_id": 33
+      }
+    },
+    "pw:client:35": {
+      "label": "",
+      "kind": "client",
+      "layer": "client",
+      "status": "active",
+      "meta": {
+        "pw_id": 35
+      }
+    },
+    "pw:client:36": {
+      "label": "WirePlumber",
+      "kind": "client",
+      "layer": "client",
+      "status": "active",
+      "meta": {
+        "pw_id": 36
+      }
+    },
+    "pw:client:41": {
+      "label": "xdg-desktop-portal",
+      "kind": "client",
+      "layer": "client",
+      "status": "active",
+      "meta": {
+        "pw_id": 41
+      }
+    },
+    "pw:client:49": {
+      "label": "WirePlumber [export]",
+      "kind": "client",
+      "layer": "client",
+      "status": "active",
+      "meta": {
+        "pw_id": 49
+      }
+    },
+    "pw:device:50": {
+      "label": "Realtek ALC298",
+      "kind": "pw_device",
+      "layer": "server",
+      "status": "active",
+      "meta": {
+        "pw_id": 50,
+        "device.name": "hdaa0"
+      }
+    },
+    "pw:device:51": {
+      "label": "Intel Kaby Lake (HDMI/DP 8ch)",
+      "kind": "pw_device",
+      "layer": "server",
+      "status": "active",
+      "meta": {
+        "pw_id": 51,
+        "device.name": "hdaa1"
+      }
+    },
+    "pw:node:52": {
+      "label": "Realtek ALC298 (Analog 2.0+HP/2.0)",
+      "kind": "sink",
+      "layer": "server",
+      "status": "active",
+      "meta": {
+        "pw_id": 52,
+        "node.name": "pcm0.play",
+        "media.class": "Audio/Sink"
+      }
+    },
+    "pw:node:53": {
+      "label": "Realtek ALC298 (Analog 2.0+HP/2.0)",
+      "kind": "source",
+      "layer": "server",
+      "status": "active",
+      "meta": {
+        "pw_id": 53,
+        "node.name": "pcm0.rec",
+        "media.class": "Audio/Source"
+      }
+    },
+    "pw:node:54": {
+      "label": "Realtek ALC298 (Left Analog Mic)",
+      "kind": "source",
+      "layer": "server",
+      "status": "active",
+      "meta": {
+        "pw_id": 54,
+        "node.name": "pcm1.rec",
+        "media.class": "Audio/Source"
+      }
+    },
+    "pw:node:55": {
+      "label": "Intel Kaby Lake (HDMI/DP 8ch) @ nid=3",
+      "kind": "sink",
+      "layer": "server",
+      "status": "active",
+      "meta": {
+        "pw_id": 55,
+        "node.name": "pcm2.play",
+        "media.class": "Audio/Sink"
+      }
+    },
+    "pw:port:34": {
+      "label": "playback_FL",
+      "kind": "port_in",
+      "layer": "server",
+      "status": "active",
+      "meta": {
+        "pw_id": 34,
+        "direction": "in",
+        "node_id": 52
+      }
+    },
+    "pw:port:48": {
+      "label": "monitor_FL",
+      "kind": "port_out",
+      "layer": "server",
+      "status": "active",
+      "meta": {
+        "pw_id": 48,
+        "direction": "out",
+        "node_id": 52
+      }
+    },
+    "pw:port:46": {
+      "label": "playback_FR",
+      "kind": "port_in",
+      "layer": "server",
+      "status": "active",
+      "meta": {
+        "pw_id": 46,
+        "direction": "in",
+        "node_id": 52
+      }
+    },
+    "pw:port:47": {
+      "label": "monitor_FR",
+      "kind": "port_out",
+      "layer": "server",
+      "status": "active",
+      "meta": {
+        "pw_id": 47,
+        "direction": "out",
+        "node_id": 52
+      }
+    },
+    "pw:port:45": {
+      "label": "capture_MONO",
+      "kind": "port_out",
+      "layer": "server",
+      "status": "active",
+      "meta": {
+        "pw_id": 45,
+        "direction": "out",
+        "node_id": 53
+      }
+    },
+    "pw:port:56": {
+      "label": "capture_MONO",
+      "kind": "port_out",
+      "layer": "server",
+      "status": "active",
+      "meta": {
+        "pw_id": 56,
+        "direction": "out",
+        "node_id": 54
+      }
+    },
+    "pw:port:57": {
+      "label": "playback_FL",
+      "kind": "port_in",
+      "layer": "server",
+      "status": "active",
+      "meta": {
+        "pw_id": 57,
+        "direction": "in",
+        "node_id": 55
+      }
+    },
+    "pw:port:58": {
+      "label": "monitor_FL",
+      "kind": "port_out",
+      "layer": "server",
+      "status": "active",
+      "meta": {
+        "pw_id": 58,
+        "direction": "out",
+        "node_id": 55
+      }
+    },
+    "pw:port:59": {
+      "label": "playback_FR",
+      "kind": "port_in",
+      "layer": "server",
+      "status": "active",
+      "meta": {
+        "pw_id": 59,
+        "direction": "in",
+        "node_id": 55
+      }
+    },
+    "pw:port:60": {
+      "label": "monitor_FR",
+      "kind": "port_out",
+      "layer": "server",
+      "status": "active",
+      "meta": {
+        "pw_id": 60,
+        "direction": "out",
+        "node_id": 55
+      }
+    },
+    "pw:client:61": {
+      "label": "plasmashell",
+      "kind": "client",
+      "layer": "client",
+      "status": "active",
+      "meta": {
+        "pw_id": 61
+      }
+    },
+    "pw:client:62": {
+      "label": "libcanberra",
+      "kind": "client",
+      "layer": "client",
+      "status": "active",
+      "meta": {
+        "pw_id": 62
+      }
+    },
+    "pw:client:63": {
+      "label": "",
+      "kind": "client",
+      "layer": "client",
+      "status": "active",
+      "meta": {
+        "pw_id": 63
+      }
+    },
+    "pw:client:65": {
+      "label": "Firefox",
+      "kind": "client",
+      "layer": "client",
+      "status": "active",
+      "meta": {
+        "pw_id": 65
+      }
+    },
+    "pw:client:66": {
+      "label": "libcanberra",
+      "kind": "client",
+      "layer": "client",
+      "status": "active",
+      "meta": {
+        "pw_id": 66
+      }
+    },
+    "pw:client:67": {
+      "label": "pw-dump",
+      "kind": "client",
+      "layer": "client",
+      "status": "active",
+      "meta": {
+        "pw_id": 67
+      }
+    },
+    "pa:server": {
+      "label": "PulseAudio (on PipeWire 1.4.9)",
+      "kind": "server",
+      "layer": "server",
+      "status": "active",
+      "meta": {
+        "default_sink": "pcm0.play",
+        "default_source": "pcm0.rec"
+      }
+    },
+    "jack:server": {
+      "label": "JACK",
+      "kind": "server",
+      "layer": "server",
+      "status": "active",
+      "meta": {}
+    },
+    "jack:port:system:capture_1": {
+      "label": "system:capture_1",
+      "kind": "jack_port",
+      "layer": "server",
+      "status": "active",
+      "meta": {}
+    },
+    "jack:port:system:capture_2": {
+      "label": "system:capture_2",
+      "kind": "jack_port",
+      "layer": "server",
+      "status": "active",
+      "meta": {}
+    },
+    "jack:port:system:playback_1": {
+      "label": "system:playback_1",
+      "kind": "jack_port",
+      "layer": "server",
+      "status": "active",
+      "meta": {}
+    },
+    "jack:port:system:playback_2": {
+      "label": "system:playback_2",
+      "kind": "jack_port",
+      "layer": "server",
+      "status": "active",
+      "meta": {}
+    },
+    "voss:server": {
+      "label": "virtual_oss",
+      "kind": "server",
+      "layer": "server",
+      "status": "inactive",
+      "meta": {}
+    },
+    "sndio:server": {
+      "label": "sndio (sndiod)",
+      "kind": "server",
+      "layer": "server",
+      "status": "inactive",
+      "meta": {}
+    }
+  },
+  "edges": [
+    {
+      "src": "hw:hdaa0",
+      "dst": "pcm:0",
+      "relation": "provides",
+      "meta": {}
+    },
+    {
+      "src": "pcm:0",
+      "dst": "dsp:0",
+      "relation": "provides",
+      "meta": {}
+    },
+    {
+      "src": "hw:hdaa0",
+      "dst": "pcm:1",
+      "relation": "provides",
+      "meta": {}
+    },
+    {
+      "src": "pcm:1",
+      "dst": "dsp:1",
+      "relation": "provides",
+      "meta": {}
+    },
+    {
+      "src": "hw:hdaa1",
+      "dst": "pcm:2",
+      "relation": "provides",
+      "meta": {}
+    },
+    {
+      "src": "pcm:2",
+      "dst": "dsp:2",
+      "relation": "provides",
+      "meta": {}
+    },
+    {
+      "src": "pw:client:33",
+      "dst": "pw:server",
+      "relation": "connected",
+      "meta": {}
+    },
+    {
+      "src": "pw:client:35",
+      "dst": "pw:server",
+      "relation": "connected",
+      "meta": {}
+    },
+    {
+      "src": "pw:client:36",
+      "dst": "pw:server",
+      "relation": "connected",
+      "meta": {}
+    },
+    {
+      "src": "pw:client:41",
+      "dst": "pw:server",
+      "relation": "connected",
+      "meta": {}
+    },
+    {
+      "src": "pw:client:49",
+      "dst": "pw:server",
+      "relation": "connected",
+      "meta": {}
+    },
+    {
+      "src": "pw:server",
+      "dst": "pw:device:50",
+      "relation": "owns",
+      "meta": {}
+    },
+    {
+      "src": "hw:hdaa0",
+      "dst": "pw:device:50",
+      "relation": "feeds",
+      "meta": {}
+    },
+    {
+      "src": "pw:server",
+      "dst": "pw:device:51",
+      "relation": "owns",
+      "meta": {}
+    },
+    {
+      "src": "hw:hdaa1",
+      "dst": "pw:device:51",
+      "relation": "feeds",
+      "meta": {}
+    },
+    {
+      "src": "pw:device:50",
+      "dst": "pw:node:52",
+      "relation": "owns",
+      "meta": {}
+    },
+    {
+      "src": "dsp:0",
+      "dst": "pw:node:52",
+      "relation": "feeds",
+      "meta": {}
+    },
+    {
+      "src": "pw:device:50",
+      "dst": "pw:node:53",
+      "relation": "owns",
+      "meta": {}
+    },
+    {
+      "src": "dsp:0",
+      "dst": "pw:node:53",
+      "relation": "feeds",
+      "meta": {}
+    },
+    {
+      "src": "pw:device:50",
+      "dst": "pw:node:54",
+      "relation": "owns",
+      "meta": {}
+    },
+    {
+      "src": "dsp:1",
+      "dst": "pw:node:54",
+      "relation": "feeds",
+      "meta": {}
+    },
+    {
+      "src": "pw:device:51",
+      "dst": "pw:node:55",
+      "relation": "owns",
+      "meta": {}
+    },
+    {
+      "src": "dsp:2",
+      "dst": "pw:node:55",
+      "relation": "feeds",
+      "meta": {}
+    },
+    {
+      "src": "pw:port:34",
+      "dst": "pw:node:52",
+      "relation": "feeds",
+      "meta": {}
+    },
+    {
+      "src": "pw:node:52",
+      "dst": "pw:port:48",
+      "relation": "feeds",
+      "meta": {}
+    },
+    {
+      "src": "pw:port:46",
+      "dst": "pw:node:52",
+      "relation": "feeds",
+      "meta": {}
+    },
+    {
+      "src": "pw:node:52",
+      "dst": "pw:port:47",
+      "relation": "feeds",
+      "meta": {}
+    },
+    {
+      "src": "pw:node:53",
+      "dst": "pw:port:45",
+      "relation": "feeds",
+      "meta": {}
+    },
+    {
+      "src": "pw:node:54",
+      "dst": "pw:port:56",
+      "relation": "feeds",
+      "meta": {}
+    },
+    {
+      "src": "pw:port:57",
+      "dst": "pw:node:55",
+      "relation": "feeds",
+      "meta": {}
+    },
+    {
+      "src": "pw:node:55",
+      "dst": "pw:port:58",
+      "relation": "feeds",
+      "meta": {}
+    },
+    {
+      "src": "pw:port:59",
+      "dst": "pw:node:55",
+      "relation": "feeds",
+      "meta": {}
+    },
+    {
+      "src": "pw:node:55",
+      "dst": "pw:port:60",
+      "relation": "feeds",
+      "meta": {}
+    },
+    {
+      "src": "pw:client:61",
+      "dst": "pw:server",
+      "relation": "connected",
+      "meta": {}
+    },
+    {
+      "src": "pw:client:62",
+      "dst": "pw:server",
+      "relation": "connected",
+      "meta": {}
+    },
+    {
+      "src": "pw:client:63",
+      "dst": "pw:server",
+      "relation": "connected",
+      "meta": {}
+    },
+    {
+      "src": "pw:client:65",
+      "dst": "pw:server",
+      "relation": "connected",
+      "meta": {}
+    },
+    {
+      "src": "pw:client:66",
+      "dst": "pw:server",
+      "relation": "connected",
+      "meta": {}
+    },
+    {
+      "src": "pw:client:67",
+      "dst": "pw:server",
+      "relation": "connected",
+      "meta": {}
+    },
+    {
+      "src": "pw:server",
+      "dst": "pa:server",
+      "relation": "provides",
+      "meta": {}
+    },
+    {
+      "src": "pw:server",
+      "dst": "jack:server",
+      "relation": "provides",
+      "meta": {}
+    },
+    {
+      "src": "jack:server",
+      "dst": "jack:port:system:capture_1",
+      "relation": "owns",
+      "meta": {}
+    },
+    {
+      "src": "jack:server",
+      "dst": "jack:port:system:capture_2",
+      "relation": "owns",
+      "meta": {}
+    },
+    {
+      "src": "jack:server",
+      "dst": "jack:port:system:playback_1",
+      "relation": "owns",
+      "meta": {}
+    },
+    {
+      "src": "jack:server",
+      "dst": "jack:port:system:playback_2",
+      "relation": "owns",
+      "meta": {}
+    }
+  ]
+}
