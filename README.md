@@ -167,6 +167,13 @@ virtual_oss_cmd /dev/dsp.ctl -f /dev/dsp6   # switch to USB headset
 virtual_oss_cmd /dev/dsp.ctl -f /dev/null   # mute (useful before suspend)
 ```
 
+Or use the interactive TUI which auto-detects control sockets and available devices:
+
+```sh
+./switch-audio-output.sh
+```
+
+
 ### `/etc/rc.suspend` and `/etc/rc.resume` — Suspend safety [badland](https://badland.io/freebsd-usb-headphones.md)
 
 ```sh
