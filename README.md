@@ -441,7 +441,7 @@ PipeWire on FreeBSD is **functional but still rough** compared to Linux. Audio v
 ### Installation
 
 ```sh
-pkg install pipewire pipewire-pulse wireplumber rtkit
+pkg install pipewire pipewire-pulse wireplumber rtkit-unix
 ```
 
 ### Config file locations (FreeBSD paths) [man.freebsd](https://man.freebsd.org/cgi/man.cgi?query=pipewire.conf&sektion=5&manpath=FreeBSD+13.2-RELEASE+and+Ports)

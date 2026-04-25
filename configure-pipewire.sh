@@ -149,7 +149,7 @@ cli_mode() {
     section "PipeWire — Packages"
 
     _missing=""
-    for _pkg in pipewire wireplumber rtkit; do
+    for _pkg in pipewire wireplumber rtkit-unix; do
         if pkg info "$_pkg" >/dev/null 2>&1; then
             ok "${_pkg} installed"
         else
