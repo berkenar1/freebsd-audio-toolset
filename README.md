@@ -318,6 +318,15 @@ pacmd list-sinks
 pacmd set-default-sink 0
 ```
 
+Check, fix, and tune all of the above:
+
+```sh
+./configure-pulseaudio.sh             # CLI: check and prompt to fix
+./configure-pulseaudio.sh --auto      # apply all fixes without prompting
+./configure-pulseaudio.sh --dry-run   # check only, no changes
+./configure-pulseaudio.sh --tui       # interactive settings editor
+```
+
 ***
 
 ## Layer 2 (alternative): ALSA on FreeBSD
