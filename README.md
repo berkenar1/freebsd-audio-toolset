@@ -500,6 +500,15 @@ pkg install alsa-plugins
 # (It maps ALSA calls to OSS since FreeBSD has no ALSA kernel layer)
 ```
 
+Check, fix, and tune PipeWire (including systemd workarounds):
+
+```sh
+./configure-pipewire.sh             # CLI: check and prompt to fix
+./configure-pipewire.sh --auto      # apply all fixes without prompting
+./configure-pipewire.sh --dry-run   # check only, no changes
+./configure-pipewire.sh --tui       # interactive settings editor
+```
+
 ***
 
 ## Quick Reference: File Map
@@ -535,3 +544,11 @@ Kernel (snd_hda / snd_uaudio) → virtual_oss → apps via /dev/dsp
 ```
 
 PipeWire should be added only if you specifically need Wayland screencasting portals — for audio alone, `virtual_oss` + optionally PulseAudio gives you a more reliable and better-supported setup on FreeBSD today. [vermaden.wordpress](https://vermaden.wordpress.com/2024/01/13/freebsd-desktop-part-29-configuration-audio-improvements/)
+
+
+TODO://
+
+- [ ] Be 100% sure that there is no issue on pipewire behaviour (maybe existing rust packages coul)
+- [ ] Add a script to check for missing files and missing lines in files
+- [ ] Add a script to check for any deadlock and broken pipe
+- [ ] Add a script to be sure the sockets are properly orchestrated
