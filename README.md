@@ -100,6 +100,14 @@ sysrc virtual_oss_enable="YES"
 service virtual_oss start
 ```
 
+Script for checking virtual_oss sanity:
+
+```sh
+./check-virtual-oss.sh
+```
+also available --fix option to fix the issues:
+
+
 ### `/etc/rc.conf` — virtual_oss Configuration
 
 This is the primary configuration mechanism for `virtual_oss`: [meka](https://meka.rs/blog/2021/10/12/freebsd-audio/)
