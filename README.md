@@ -185,6 +185,12 @@ sleep 1
 virtual_oss_cmd /dev/dsp.ctl -f /dev/dsp7
 ```
 
+Check and fix these automatically:
+
+```sh
+./configure-suspend-audio.sh
+```
+
 ### `/etc/devfs.rules` — Hide raw devices from apps [badland](https://badland.io/freebsd-usb-headphones.md)
 
 Prevents apps like PulseAudio or desktop volume monitors from opening raw hardware devices and blocking `virtual_oss`:
