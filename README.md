@@ -417,6 +417,15 @@ pacmd set-default-sink jack_out
 pacmd set-default-source jack_in
 ```
 
+Check, fix, and tune JACK configuration:
+
+```sh
+./configure-jack.sh             # CLI: check and prompt to fix
+./configure-jack.sh --auto      # apply all fixes without prompting
+./configure-jack.sh --dry-run   # check only, no changes
+./configure-jack.sh --tui       # interactive settings editor
+```
+
 ***
 
 ## Layer 3: PipeWire
