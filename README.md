@@ -358,6 +358,15 @@ ctl.!default {
 
 > In practice, on FreeBSD you rarely need complex `.asoundrc` configs. Most apps using ALSA on FreeBSD should just work if you have `virtual_oss` running and `alsa-plugins` installed.
 
+Check, fix, and tune ALSA configuration:
+
+```sh
+./configure-alsa.sh             # CLI: check and prompt to fix
+./configure-alsa.sh --auto      # apply all fixes without prompting
+./configure-alsa.sh --dry-run   # check only, no changes
+./configure-alsa.sh --tui       # interactive settings editor
+```
+
 ***
 
 ## Layer 2 (pro audio): JACK
