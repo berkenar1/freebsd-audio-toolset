@@ -105,8 +105,12 @@ Script for checking virtual_oss sanity:
 ```sh
 ./check-virtual-oss.sh
 ```
-also available --fix option to fix the issues:
 
+```
+./setup-virtual-oss.sh — interactive, asks before each change
+./setup-virtual-oss.sh --auto — apply everything automatically
+./setup-virtual-oss.sh --dry-run — preview only
+```
 
 ### `/etc/rc.conf` — virtual_oss Configuration
 
