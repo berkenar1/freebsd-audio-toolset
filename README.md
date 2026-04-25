@@ -4,6 +4,12 @@ Metaanalysis on FreeBSD Audio Stack and My Findings While Tuning My Daily Driver
 
 FreeBSD's audio model is fundamentally **OSS-based** (Open Sound System), not ALSA — the kernel exposes `/dev/dspN`, `/dev/mixerN`, and `/dev/sndstat`. ALSA, PulseAudio, PipeWire, and JACK all sit on top of this, either natively or via adaptation layers. Here's a full breakdown, layer by layer.
 
+**Interactive toolkit** — launch the main TUI to access all scripts:
+
+```sh
+./audio-toolkit.sh
+```
+
 ***
 
 ## Layer 0: Kernel & Drivers
