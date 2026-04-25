@@ -247,7 +247,15 @@ notify 100 {
 };
 ```
 
-Get your vendor ID with `usbconfig -d ugenX.Y dump_device_desc`.not 
+Get your vendor ID with `usbconfig -d ugenX.Y dump_device_desc`.
+
+Detect USB audio devices and generate/fix devd rules automatically:
+
+```sh
+./configure-devd-audio.sh             # interactive
+./configure-devd-audio.sh --auto      # apply all fixes without prompting
+./configure-devd-audio.sh --dry-run   # check only, no changes
+```
 
 ***
 
