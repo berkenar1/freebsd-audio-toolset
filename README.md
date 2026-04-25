@@ -68,6 +68,12 @@ hw.snd.latency_profile=1
 # hw.snd.verbose=2
 ```
 
+For this purpose script for sysctl tuning over pcm devices with 4 available profiles:
+
+```sh
+./tune-pcm-sysctls.sh <profile> (low-latency, desktop, server, bitperfect)
+```
+
 > **Note:** `hw.snd.default_unit` set in `/etc/sysctl.conf` runs after device detection, which is why it works where `loader.conf` doesn't for this variable. [forums.freebsd](https://forums.freebsd.org/threads/cant-set-default-snd-unit-from-loader-conf.75184/)
 
 ### Key diagnostic commands
