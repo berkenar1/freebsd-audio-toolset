@@ -216,6 +216,14 @@ add path 'mixer[789]' hide
 
 Activate with `sysrc devfs_system_ruleset="audio"` in `/etc/rc.conf`.
 
+Check and fix all of the above automatically:
+
+```sh
+./configure-devfs-audio.sh             # interactive (prompts before each fix)
+./configure-devfs-audio.sh --auto      # apply all fixes without prompting
+./configure-devfs-audio.sh --dry-run   # check only, no changes
+```
+
 ### `/usr/local/etc/devd/` — USB Hotplug [badland](https://badland.io/freebsd-usb-headphones.md)
 
 Auto-switch `virtual_oss` on USB attach/detach using `devd`:
@@ -239,7 +247,7 @@ notify 100 {
 };
 ```
 
-Get your vendor ID with `usbconfig -d ugenX.Y dump_device_desc`.
+Get your vendor ID with `usbconfig -d ugenX.Y dump_device_desc`.not 
 
 ***
 
