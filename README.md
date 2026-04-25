@@ -548,7 +548,7 @@ PipeWire should be added only if you specifically need Wayland screencasting por
 
 TODO://
 
-- [ ] Be 100% sure that there is no issue on pipewire behaviour (maybe existing rust packages coul)
+- [ ] Be 100% sure that there is no issue on pipewire behaviour (maybe existing rust packages could be used as a temporary replacement)
 - [ ] Add a script to check for missing files and missing lines in files
 - [ ] Add a script to check for any deadlock and broken pipe
 - [ ] Add a script to be sure the sockets are properly orchestrated
