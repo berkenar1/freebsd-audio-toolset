@@ -152,6 +152,12 @@ virtual_oss_dummy="-T /dev/sndstat -S -i 8 -C 2 -c 2 -r 48000 -b 32 -s 768 \
 | `-i N` | Real-time priority (uses `rtprio`) |
 | `-M i,src,dst,...` | Channel routing/mixing matrix entries |
 
+Managable with the following script:
+
+```sh
+./configure-virtual-oss.sh
+```
+
 ### Runtime switching
 
 ```sh
